@@ -3,7 +3,7 @@
  */
 html {
   font-family: Calibri, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
@@ -22,8 +22,10 @@ body {
 .sidebar {
   margin: 0px;
   display: grid;
+  grid-template-rows: auto 1fr;
   height: 100vh;
   background-color: hsl(190, 30%, 31%);
+  color: white;
 
   padding: 8px;
 }
@@ -35,6 +37,7 @@ body {
   grid-template-rows: auto auto 1fr auto;
   height: 100vh;
   background-color: hsl(51, 13%, 71%);
+  color: black;
 
   padding: 8px;
 }
@@ -42,13 +45,37 @@ body {
 /*
  *  Header and fonts
 */
-
 h1 {
   margin: 0px;
 }
 h2 {
+  margin: 0px 0px 5px 0px;
+  border-style: none none solid none;
+  border-width: medium;
+  border-color: black;
+
+}
+h3 {
   margin: 0px;
 }
 p {
   margin: 0px;
+}
+
+/*
+* Miscilaneious
+*/
+/*img {
+  padding: 5px;
+  margin: 0px 25px 0px 10px;
+  height: 150px;
+  width: auto;
+  border: 1px solid #000;
+}*/
+
+header {
+  height: 45px;
+  display: grid;
+  align-items: center;
+  justify-items: left;
 }
