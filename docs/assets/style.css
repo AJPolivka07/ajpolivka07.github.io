@@ -6,14 +6,19 @@ html {
   font-size: 16px;
 }
 
-/* horizontal split into sidebar and primary section */
 body {
+  margin: 0px;
+}
+
+/* horizontal split into sidebar and primary section */
+.core {
   margin: 0px;
   display: grid;
   grid-template-columns: 1fr 5fr;
   height: 100vh;
 }
 
+/*sidebar*/
 .sidebar {
   margin: 0px;
   display: grid;
