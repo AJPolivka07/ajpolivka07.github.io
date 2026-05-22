@@ -99,6 +99,8 @@ nav a {
   text-decoration: none;
   color: white;
   height: auto;
+  display: grid;
+  grid-template-columns: 25px auto;
 }
 
 nav h3 {
@@ -106,4 +108,12 @@ nav h3 {
   border-style: none none solid none;
   border-width: thin;
   border-color: white;
+}
+
+nav a img {
+  height: 20px;
+  width: auto;
+  color: white;
+  stroke: currentColor;
+  margin-right: 5px;
 }
