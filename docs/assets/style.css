@@ -23,7 +23,6 @@ body {
   margin: 0px;
   display: grid;
   grid-template-rows: auto 1fr;
-  height: 100vh;
   background-color: hsl(190, 30%, 31%);
   color: white;
 
@@ -53,7 +52,6 @@ h2 {
   border-style: none none solid none;
   border-width: medium;
   border-color: black;
-
 }
 h3 {
   margin: 0px;
@@ -78,4 +76,34 @@ header {
   display: grid;
   align-items: center;
   justify-items: left;
+}
+
+footer {
+  height: 45px;
+  display: grid;
+  align-items: center;
+  justify-items: left;
+}
+
+/*
+* navbar
+*/
+nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  height: auto;
+}
+
+nav h3 {
+  margin: 15px 0px 5px 0px;
+  border-style: none none solid none;
+  border-width: thin;
+  border-color: white;
 }
