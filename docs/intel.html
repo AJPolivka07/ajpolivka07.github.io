@@ -88,6 +88,29 @@
     .card:hover .switch-container p {
       opacity: 1;
     }
+
+    @media screen and (max-width: 768px) {
+      .timeline {
+        display: flexbox;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+      }
+
+      .hero-icon {
+        grid-row: 1;
+        place-self: center center;
+      }
+    }
   </style>
 </head>
 
