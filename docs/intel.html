@@ -4,140 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/style.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Intel One Mono' rel='stylesheet'>
+  <!--Intel uses two fonts: Intel One Mono and Helvetica-->
+
+  <style>
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      background-color: #0068B5;
+      padding: 50px;
+      text-align: left;
+      color: white;
+    }
+    
+    .timeline {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 20px;
+    }
+    
+    .card:hover, .card:focus, .card:active {
+      transition: scale 0.3s ease, box-shadow 0.3s ease;
+      scale: 1.05;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-family: 'Intel One Mono', monospace;
+      color: #0068B5;
+      width: 200px;
+    }
+
+    .switch-container {
+      display: block;
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .switch-container img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .switch-container p {
+      /*signifigantly borrowed from https://www.w3schools.com/csS/css3_images_hover.asp*/
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: .5s ease;
+
+      background-color: rgba(0, 199, 253, 0.7);
+      padding: 5px;
+      font-size: 15px;
+      font-family: 'Helvetica', Arial, sans-serif;
+      text-align: justify;
+    }
+
+    .card:hover .switch-container p {
+      opacity: 1;
+    }
+  </style>
 </head>
+
 <body>
+  <section class="hero">
+    <img style="grid-row: 1 / span 2; margin-right: 25px;" src="img/intel-header-logo.svg" alt="Intel Logo"/>
+    <h1 style="font-family: 'Intel One Mono', monospace; margin-left: 25px;"> <!--Appropriate fall back font-->
+      Sustainability<br>Through the Ages
+    </h1>
+    <p style="font-family: 'Helvetica', Arial, sans-serif; margin-left: 25px;">
+      Explore Intel<sup>®</sup>'s journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
+    </p>
+  </section>
 
-  <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
-
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
-    </div>
-  </header>
-
-  <!-- Timeline Cards Section -->
-  <section>
-
+  <section class="timeline">
     <!-- Card 1: 1968 -->
-    <div>
+    <div class="card">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <!-- Add image -->
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Robert Noyce and Gordon Moore rename the newly formed company 
+          NM Electronics to Intel Corporation, laying the foundation for 
+          decades of technological innovation.
+        </p>
+      </div>
     </div>
 
     <!-- Card 2: 1971 -->
-    <div>
+    <div class="card">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <!-- Add image -->
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Intel debuts the 4004, the world's first commercial microprocessor, 
+          igniting the microprocessor revolution and propelling the future 
+          of computing devices.
+        </p>
+      </div>
     </div>
 
     <!-- Card 3: 1978 -->
-    <div>
+    <div class="card">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <!-- Add image -->
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Launch of the 8086 processor, establishing the x86 architecture 
+          that drives countless PCs and servers in the modern era.
+        </p>
+      </div>
     </div>
 
     <!-- Card 4: 1985 -->
-    <div>
+    <div class="card">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <!-- Add image -->
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Intel introduces the 386 processor with 32-bit architecture, 
+          ushering in a new era of performance and multitasking for 
+          personal computers.
+        </p>
+      </div>
     </div>
 
     <!-- Card 5: 2006 -->
-    <div>
+    <div class="card">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <!-- Add image -->
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          This year marks Intel's highest annual greenhouse gas emissions 
+          for operations. Over subsequent years, Intel invests heavily in 
+          chemical abatement, renewable energy, and energy-efficient 
+          manufacturing to reverse this trend.
+        </p>
+      </div>
     </div>
 
     <!-- Card 6: 2020 -->
-    <div>
+    <div class="card">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <!-- Add image -->
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+          Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+          progress on climate action, water stewardship, and waste reduction.
+        </p>
+      </div>
     </div>
 
     <!-- Card 7: 2022 -->
-    <div>
+    <div class="card">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <!-- Add image -->
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Intel announces its commitment to achieve net-zero greenhouse 
+          gas emissions (Scope 1 and 2) across its global operations 
+          by 2040, building on years of environmental initiatives.
+        </p>
+      </div>
     </div>
 
     <!-- Card 8: 2023 -->
-    <div>
+    <div class="card">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <!-- Add image -->
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          The company achieves 99% renewable electricity usage worldwide, 
+          helping to drastically lower carbon emissions and driving progress 
+          toward Intel's long-term sustainability goals.
+        </p>
+      </div>
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <div class="card">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <!-- Add image -->
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <p>
+          Intel hosts its first Sustainability Summit, uniting suppliers, 
+          government officials, and industry leaders to collaborate on 
+          next-generation sustainable semiconductor manufacturing.
+        </p>
+      </div>
     </div>
   </section>
+
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 </body>
 </html>
