@@ -14,15 +14,18 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
       background-color: #0068B5;
-      padding: 50px;
+      padding: 25px;
       text-align: left;
       color: white;
     }
     
     .timeline {
       display: flex;
-      overflow-x: auto;
+      flex-direction: row;
+      overflow-x: scroll;
       padding: 20px;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     .card {
@@ -62,6 +65,10 @@
       width: 100%;
     }
 
+    .hero-icon {
+      grid-row: 1 / span 2;
+    }
+
     .switch-container p {
       /*signifigantly borrowed from https://www.w3schools.com/csS/css3_images_hover.asp*/
       position: absolute;
@@ -86,11 +93,11 @@
 
 <body>
   <section class="hero">
-    <img style="grid-row: 1 / span 2; margin-right: 25px;" src="img/intel-header-logo.svg" alt="Intel Logo"/>
-    <h1 style="font-family: 'Intel One Mono', monospace; margin-left: 25px;"> <!--Appropriate fall back font-->
+    <img class="hero-icon" style="margin: 25px; max-height: 200px;" src="img/intel-header-logo.svg" alt="Intel Logo"/>
+    <h1 style="font-family: 'Intel One Mono', monospace; margin: 25px; margin-bottom: 0px;"> <!--Appropriate fall back font-->
       Sustainability<br>Through the Ages
     </h1>
-    <p style="margin-left: 25px;">
+    <p style="margin: 25px; margin-top: 0px;">
       Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
     </p>
   </section>
