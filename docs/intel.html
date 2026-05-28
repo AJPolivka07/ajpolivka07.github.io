@@ -9,6 +9,28 @@
   <!--Intel uses two fonts: Intel One Mono and Helvetica-->
 
   <style>
+    /* headers and fonts */
+    h1 {
+      font-family: 'Intel One Mono', monospace;
+      color: white;
+    }
+
+    h2 {
+      font-family: 'Intel One Mono', monospace;
+      color: #0068B5;
+    }
+
+    h3 {
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 19px;
+    }
+
+    p {
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 17px;
+    }
+
+    /* hero section layout and styling */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -18,7 +40,12 @@
       text-align: left;
       color: white;
     }
+
+    .hero-icon {
+      grid-row: 1 / span 2;
+    }
     
+    /*timeline layout and styling*/
     .timeline {
       display: flex;
       flex-direction: row;
@@ -28,6 +55,7 @@
       justify-content: flex-start;
     }
 
+    /*card layout and styling*/
     .card {
       background-color: #f0f0f0;
       border-radius: 8px;
@@ -41,17 +69,6 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
-    h2 {
-      font-family: 'Intel One Mono', monospace;
-      color: #0068B5;
-      width: 200px;
-    }
-
-    p {
-      font-family: 'Helvetica', Arial, sans-serif;
-      font-size: 17px;
-    }
-
     .switch-container {
       display: block;
       position: relative;
@@ -63,10 +80,6 @@
       object-fit: cover;
       height: 100%;
       width: 100%;
-    }
-
-    .hero-icon {
-      grid-row: 1 / span 2;
     }
 
     .switch-container p {
@@ -89,6 +102,7 @@
       opacity: 1;
     }
 
+    /*responsive design for mobile devices*/
     @media screen and (max-width: 768px) {
       .timeline {
         display: flexbox;
@@ -117,7 +131,7 @@
 <body>
   <section class="hero">
     <img class="hero-icon" style="margin: 25px; max-height: 200px;" src="img/intel-header-logo.svg" alt="Intel Logo"/>
-    <h1 style="font-family: 'Intel One Mono', monospace; margin: 25px; margin-bottom: 0px;"> <!--Appropriate fall back font-->
+    <h1 style="margin: 25px; margin-bottom: 0px;">
       Sustainability<br>Through the Ages
     </h1>
     <p style="margin: 25px; margin-top: 0px;">
