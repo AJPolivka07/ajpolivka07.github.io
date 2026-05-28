@@ -32,7 +32,7 @@
       margin: 20px;
     }
     
-    .card:hover, .card:focus, .card:active {
+    .card:hover {
       transition: scale 0.3s ease, box-shadow 0.3s ease;
       scale: 1.05;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -42,6 +42,11 @@
       font-family: 'Intel One Mono', monospace;
       color: #0068B5;
       width: 200px;
+    }
+
+    p {
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 17px;
     }
 
     .switch-container {
@@ -67,10 +72,9 @@
       opacity: 0;
       transition: .5s ease;
 
-      background-color: rgba(0, 199, 253, 0.7);
+      background-color: rgba(0, 199, 253, 0.9);
       padding: 5px;
       font-size: 15px;
-      font-family: 'Helvetica', Arial, sans-serif;
       text-align: justify;
     }
 
@@ -86,22 +90,24 @@
     <h1 style="font-family: 'Intel One Mono', monospace; margin-left: 25px;"> <!--Appropriate fall back font-->
       Sustainability<br>Through the Ages
     </h1>
-    <p style="font-family: 'Helvetica', Arial, sans-serif; margin-left: 25px;">
-      Explore Intel<sup>®</sup>'s journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
+    <p style="margin-left: 25px;">
+      Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
     </p>
   </section>
 
+  <section style="text-align: center; padding: 40px; padding-bottom: 0px;">
+    <p>Scroll to view the whole timeline | Hover over or press on cards to learn more!</p>
+  </section>
+  
   <section class="timeline">
     <!-- Card 1: 1968 -->
     <div class="card">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
       <div class="switch-container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Gordon_Moore_and_Robert_Noyce_at_Intel_SC1_in_Santa_Clara_1970.png" alt="Gordon Moore and Robert Noyce at Intel SC1 in Santa Clara, 1970"/>
         <p>
-          Robert Noyce and Gordon Moore rename the newly formed company 
-          NM Electronics to Intel Corporation, laying the foundation for 
-          decades of technological innovation.
+          Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.
         </p>
       </div>
     </div>
@@ -111,11 +117,9 @@
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
       <div class="switch-container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <img src="img/Intel_4004_ad.jpg" alt="An ad from 1971 for the 4004 microprocessor (modified)."/>
         <p>
-          Intel debuts the 4004, the world's first commercial microprocessor, 
-          igniting the microprocessor revolution and propelling the future 
-          of computing devices.
+          Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.
         </p>
       </div>
     </div>
@@ -125,10 +129,9 @@
       <h2>1978</h2>
       <h3>8086 Processor</h3>
       <div class="switch-container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Intel_C8086.jpg" alt="Photo of the Intel C8086 processor."/>
         <p>
-          Launch of the 8086 processor, establishing the x86 architecture 
-          that drives countless PCs and servers in the modern era.
+          Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.
         </p>
       </div>
     </div>
@@ -138,11 +141,9 @@
       <h2>1985</h2>
       <h3>386 Processor</h3>
       <div class="switch-container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Compaq_Deskpro_386_16Mhz_edit.jpg" alt="Photo of the Compaq Deskpro 386, the first PC to feature the 386 processor."/>
         <p>
-          Intel introduces the 386 processor with 32-bit architecture, 
-          ushering in a new era of performance and multitasking for 
-          personal computers.
+          Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.
         </p>
       </div>
     </div>
@@ -154,10 +155,7 @@
       <div class="switch-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
         <p>
-          This year marks Intel's highest annual greenhouse gas emissions 
-          for operations. Over subsequent years, Intel invests heavily in 
-          chemical abatement, renewable energy, and energy-efficient 
-          manufacturing to reverse this trend.
+          This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.
         </p>
       </div>
     </div>
@@ -169,9 +167,7 @@
       <div class="switch-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
         <p>
-          Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-          Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
+          Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.
         </p>
       </div>
     </div>
@@ -183,9 +179,7 @@
       <div class="switch-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
         <p>
-          Intel announces its commitment to achieve net-zero greenhouse 
-          gas emissions (Scope 1 and 2) across its global operations 
-          by 2040, building on years of environmental initiatives.
+          Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.
         </p>
       </div>
     </div>
@@ -197,9 +191,7 @@
       <div class="switch-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
         <p>
-          The company achieves 99% renewable electricity usage worldwide, 
-          helping to drastically lower carbon emissions and driving progress 
-          toward Intel's long-term sustainability goals.
+          The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.
         </p>
       </div>
     </div>
@@ -211,14 +203,10 @@
       <div class="switch-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" alt="placeholder"/>
         <p>
-          Intel hosts its first Sustainability Summit, uniting suppliers, 
-          government officials, and industry leaders to collaborate on 
-          next-generation sustainable semiconductor manufacturing.
+          Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.
         </p>
       </div>
     </div>
   </section>
-
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
 </body>
 </html>
