@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intel: Sustainability Through the Ages</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Intel One Mono' rel='stylesheet'>
+  <!--Intel uses two fonts: Intel One Mono and Helvetica-->
+
+  <style>
+    /* headers and fonts */
+    h1 {
+      font-family: 'Intel One Mono', monospace;
+      color: white;
+    }
+
+    h2 {
+      font-family: 'Intel One Mono', monospace;
+      color: #0068B5;
+    }
+
+    h3 {
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 19px;
+    }
+
+    p {
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 17px;
+    }
+
+    /* hero section layout and styling */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      background-color: #0068B5;
+      padding: 25px;
+      text-align: left;
+      color: white;
+    }
+
+    .hero-icon {
+      grid-row: 1 / span 2;
+    }
+    
+    /*timeline layout and styling*/
+    .timeline {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      padding: 20px;
+      align-items: center;
+      justify-content: flex-start;
+      scroll-snap-type: x mandatory;
+    }
+
+    /*card layout and styling*/
+    .card {
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 20px;
+      scroll-snap-align: center;
+    }
+    
+    .card:hover {
+      transition: scale 0.3s ease, box-shadow 0.3s ease;
+      scale: 1.05;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .switch-container {
+      display: block;
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .switch-container img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .switch-container p {
+      /*signifigantly borrowed from https://www.w3schools.com/csS/css3_images_hover.asp*/
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: .5s ease;
+
+      background-color: rgba(0, 199, 253, 0.9);
+      padding: 10px;
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .card:hover .switch-container p {
+      opacity: 1;
+    }
+
+    /*responsive design for mobile devices*/
+    @media screen and (max-width: 768px) {
+      .timeline {
+        display: flexbox;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+      }
+
+      .hero-icon {
+        grid-row: 1;
+        place-self: center center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <img class="hero-icon" style="margin: 25px; max-height: 200px;" src="img/intel-header-logo.svg" alt="Intel Logo"/>
+    <h1 style="margin: 25px; margin-bottom: 0px;">
+      Sustainability<br>Through the Ages
+    </h1>
+    <p style="margin: 25px; margin-top: 0px;">
+      Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
+    </p>
+  </section>
+
+  <section style="text-align: center; padding: 40px; padding-bottom: 0px;">
+    <p>Scroll to view the whole timeline | Hover over or press on cards to learn more!</p>
+  </section>
+  
+  <section class="timeline">
+    <!-- Card 1: 1968 -->
+    <div class="card">
+      <h2>1968</h2>
+      <h3>Intel Founded</h3>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Gordon_Moore_and_Robert_Noyce_at_Intel_SC1_in_Santa_Clara_1970.png" alt="Gordon Moore and Robert Noyce at Intel SC1 in Santa Clara, 1970"/>
+        <p>
+          Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: 1971 -->
+    <div class="card">
+      <h2>1971</h2>
+      <h3>First Microprocessor</h3>
+      <div class="switch-container">
+        <img src="img/Intel_4004_ad.jpg" alt="An ad from 1971 for the 4004 microprocessor (modified)."/>
+        <p>
+          Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: 1978 -->
+    <div class="card">
+      <h2>1978</h2>
+      <h3>8086 Processor</h3>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Intel_C8086.jpg" alt="Photo of the Intel C8086 processor."/>
+        <p>
+          Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: 1985 -->
+    <div class="card">
+      <h2>1985</h2>
+      <h3>386 Processor</h3>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Compaq_Deskpro_386_16Mhz_edit.jpg" alt="Photo of the Compaq Deskpro 386, the first PC to feature the 386 processor."/>
+        <p>
+          Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: 2006 -->
+    <div class="card">
+      <h2>2006</h2>
+      <h3>Peak GHG Emissions</h3>
+      <div class="switch-container">
+        <img src="img/ghg power plant png.png" alt="Generic image of an oil power plant"/>
+        <p>
+          This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: 2020 -->
+    <div class="card">
+      <h2>2020</h2>
+      <h3>RISE Strategy</h3>
+      <div class="switch-container">
+        <img src="img/Intel Rise Strategy graphic.jpg" alt="Graphic used to represent Intel's RISE Strategy"/>
+        <p>
+          Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: 2022 -->
+    <div class="card">
+      <h2>2022</h2>
+      <h3>Net-Zero By 2040</h3>
+      <div class="switch-container">
+        <img src="https://edienetlive.s3.eu-west-2.amazonaws.com/wp-content/uploads/sites/2/full_43259.jpg" alt="Net-zero emissions by 2040"/>
+        <p>
+          Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: 2023 -->
+    <div class="card">
+      <h2>2023</h2>
+      <h3>Renewable Electricity</h3>
+      <div class="switch-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Renewable_Energy_on_the_Grid.jpg" alt="Wind turbines and solar panels in front of a sunrise"/>
+        <p>
+          The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: 2024 -->
+    <div class="card">
+      <h2>2024</h2>
+      <h3>Sustainability Summit</h3>
+      <div class="switch-container">
+        <img src="https://assets.blog.siemens.com/uploads/2024/03/DSC_4147A-scaled.jpg?resize=2048%2C1069" alt="Four speakers from the 2024 Intel Sustainability Summit"/>
+        <p>
+          Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
