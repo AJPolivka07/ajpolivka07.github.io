@@ -53,6 +53,7 @@
       padding: 20px;
       align-items: center;
       justify-content: flex-start;
+      scroll-snap-type: x mandatory;
     }
 
     /*card layout and styling*/
@@ -61,6 +62,7 @@
       border-radius: 8px;
       padding: 15px 20px;
       margin: 20px;
+      scroll-snap-align: center;
     }
     
     .card:hover {
@@ -93,9 +95,9 @@
       transition: .5s ease;
 
       background-color: rgba(0, 199, 253, 0.9);
-      padding: 5px;
+      padding: 10px;
       font-size: 15px;
-      text-align: justify;
+      text-align: left;
     }
 
     .card:hover .switch-container p {
