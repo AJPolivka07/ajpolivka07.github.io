@@ -384,3 +384,17 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* added styles for the event check-in page */
+summary { 
+  cursor: pointer;
+  color: #475569;
+  font-size: 14px;
+}
+
+li {
+ list-style-type: none;
+ color: #475569;
+ font-size: 14px;
+}

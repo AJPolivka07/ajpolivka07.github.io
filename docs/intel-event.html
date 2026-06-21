@@ -33,6 +33,12 @@
       <div class="progress-container">
         <div id="progressBar" class="progress-bar"></div>
       </div>
+      <!-- Celebration message for goal-->
+      <div class="container" id="celebration" style="padding: 10px; margin-top: 15px; display: none;">
+        We have reached our goal of 50 attendees! 🎉<br>
+        The winning team was <strong id="celebrationWinner"></strong>! 🏆<br>
+        You may continue to check in. Let's keep the momentum going!🌍
+      </div>
     </div>
     <div class="container">
       <!-- Feedback message -->
@@ -70,14 +76,26 @@
           <div class="team-card water">
             <span class="team-name" id="waterName">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <details>
+              <summary>View Attendees</summary>
+              <ul id="waterAttendees"></ul>
+            </details>
           </div>
           <div class="team-card zero">
             <span class="team-name" id="zeroName">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <details>
+              <summary>View Attendees</summary>
+              <ul id="zeroAttendees"></ul>
+            </details>
           </div>
           <div class="team-card power">
             <span class="team-name" id="powerName">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <details>
+              <summary>View Attendees</summary>
+              <ul id="powerAttendees"></ul>
+            </details>
           </div>
         </div>
       </div>

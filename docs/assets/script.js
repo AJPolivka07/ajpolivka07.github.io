@@ -17,6 +17,8 @@ form.addEventListener("submit", function (e) {
   var teamCount; //pointer to element that counts number of attendees checked in for each team, an HTMLElement
   var greetingBanner; //pointer to element that displays a greeting message, an HTMLElement
   var message; //message to be displayed, a String
+  var attendeeList; //pointer to element that contains the list of attendees for each team, an HTMLElement
+  var newAttendee; //pointer to created element that contains the name of the attendee being checked in, an HTMLElement
 
   //internally update variables
   name = nameField.value;
@@ -44,11 +46,54 @@ form.addEventListener("submit", function (e) {
   document.getElementById("progressBar").style.width = percentage;
 
   greetingBanner = document.getElementById("greeting");
-  message = document.getElementById(team + "Name").textContent; //defines the message
+  message = document.getElementById(team + "Name").textContent; //fetches the team's name
   message = `Welcome ${name} from ${message}! Thank you for checking in.`;
   greetingBanner.style.display = "block";  //updates the message on the webpage
   greetingBanner.textContent = message;
   //console.log(message);
+  message = "";
+
+  //adds name to the list of attendees for the team
+  attendeeList = document.getElementById(team + "Attendees");
+  newAttendee = document.createElement("li");
+  newAttendee.textContent = name;
+  attendeeList.appendChild(newAttendee);
+
+  //displays the celebration banner if the goal is reached
+  if (count == goal) { //TOTO change back to count == goal, currently in debug to always show
+    let waterCount;
+    let zeroCount;
+    let powerCount;
+    
+    waterCount = parseInt(document.getElementById("waterCount").textContent);
+    zeroCount = parseInt(document.getElementById("zeroCount").textContent);
+    powerCount = parseInt(document.getElementById("powerCount").textContent);
+
+    //if two or more teams share the top count, the result is a tie.
+    let maxCount = Math.max(waterCount, zeroCount, powerCount);
+    let topCountTeams = [waterCount, zeroCount, powerCount].filter(function (countValue) {
+      return countValue === maxCount;
+    }).length;
+
+    if (topCountTeams > 1) {
+      console.log("There's a tie!");
+      message = "a tie";
+    }
+    else if (waterCount === maxCount) {
+      console.log("Winner: water at " + waterCount);
+      message = document.getElementById("waterName").textContent; //fetches the team's name
+    }
+    else if (zeroCount === maxCount) {
+      console.log("Winner: zero at " + zeroCount);
+      message = document.getElementById("zeroName").textContent; //fetches the team's name
+    }
+    else {
+      console.log("Winner: power at " + powerCount);
+      message = document.getElementById("powerName").textContent; //fetches the team's name
+    }
+    document.getElementById("celebration").style.display = "block";
+    document.getElementById("celebrationWinner").textContent = message;
+  }
 
   //form.reset(); //resets form fields after submission
   //TODO undisable, currently in debug to allow spam
