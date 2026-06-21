@@ -10,11 +10,12 @@ let percentage = 0; //percentage of goal reached
 
 // an event listener on form that provides the majority of this page's functionality.
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); //prevents default behaviour, specifically browser refresh
+  e.preventDefault(); //prevents default behaviour, specifically browser refresh upon form submission
   
   var name; //name provided by form, a String
   var team; //team provied by form, {water, zero, power}
   var teamCount; //pointer to element that counts number of attendees checked in for each team, an HTMLElement
+  var greetingBanner; //pointer to element that displays a greeting message, an HTMLElement
   var message; //message to be displayed, a String
 
   //internally update variables
@@ -29,20 +30,26 @@ form.addEventListener("submit", function (e) {
   }
 
   //DEBUG
-  console.log("Name: " + name);
-  console.log("Team: " + team);
-  console.log("Number of attendees checked in: " + count);
-  console.log("Percentage of goal reached: " + percentage);
+  //console.log("Name: " + name);
+  //console.log("Team: " + team);
+  //console.log("Number of attendees checked in: " + count);
+  //console.log("Percentage of goal reached: " + percentage);
 
   //updates team attendance cards on the webpage
   teamCount = document.getElementById(team + "Count"); //fetches the pointer
   teamCount.textContent = parseInt(teamCount.textContent) + 1; //parses the text content, converts to int, adds 1, then updates the text content with the new value
 
   //updates the overall attendance count and progress bar on the webpage
-  document.getElementById("attendeeCount").textContent = count; //updates the overall attendance count
+  document.getElementById("attendeeCount").textContent = count;
+  document.getElementById("progressBar").style.width = percentage;
 
-  message = `Welcome ${name} for ${team}! You have checked in.`; //defines the message
-  console.log(message);
+  greetingBanner = document.getElementById("greeting");
+  message = document.getElementById(team + "Name").textContent; //defines the message
+  message = `Welcome ${name} from ${message}! Thank you for checking in.`;
+  greetingBanner.style.display = "block";  //updates the message on the webpage
+  greetingBanner.textContent = message;
+  //console.log(message);
 
-  form.reset(); //resets form fields after submission
+  //form.reset(); //resets form fields after submission
+  //TODO undisable, currently in debug to allow spam
 });
