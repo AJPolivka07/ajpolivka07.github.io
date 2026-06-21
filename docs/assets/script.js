@@ -31,12 +31,6 @@ form.addEventListener("submit", function (e) {
       percentage = "100%";
   }
 
-  //DEBUG
-  //console.log("Name: " + name);
-  //console.log("Team: " + team);
-  //console.log("Number of attendees checked in: " + count);
-  //console.log("Percentage of goal reached: " + percentage);
-
   //updates team attendance cards on the webpage
   teamCount = document.getElementById(team + "Count"); //fetches the pointer
   teamCount.textContent = parseInt(teamCount.textContent) + 1; //parses the text content, converts to int, adds 1, then updates the text content with the new value
@@ -60,7 +54,7 @@ form.addEventListener("submit", function (e) {
   attendeeList.appendChild(newAttendee);
 
   //displays the celebration banner if the goal is reached
-  if (count == goal) { //TOTO change back to count == goal, currently in debug to always show
+  if (count >= goal) {
     let waterCount;
     let zeroCount;
     let powerCount;
@@ -97,4 +91,36 @@ form.addEventListener("submit", function (e) {
 
   //form.reset(); //resets form fields after submission
   //TODO undisable, currently in debug to allow spam
+
+  //saves various values to session storage
+  sessionStorage.setItem("count", count);
+  sessionStorage.setItem("percentage", percentage);
+  sessionStorage.setItem("waterCount", document.getElementById("waterCount").textContent);
+  sessionStorage.setItem("zeroCount", document.getElementById("zeroCount").textContent);
+  sessionStorage.setItem("powerCount", document.getElementById("powerCount").textContent);
+  sessionStorage.setItem("waterAttendees", document.getElementById("waterAttendees").innerHTML);
+  sessionStorage.setItem("zeroAttendees", document.getElementById("zeroAttendees").innerHTML);
+  sessionStorage.setItem("powerAttendees", document.getElementById("powerAttendees").innerHTML);
+  sessionStorage.setItem("goalReached", count >= goal);
 });
+
+// immediately inserts session values on page load
+(function() {
+  console.log("Page loaded - add functionality here");
+
+  count = sessionStorage.getItem("count") || 0;
+  percentage = sessionStorage.getItem("percentage") || 0;
+  document.getElementById("attendeeCount").textContent = count;
+  document.getElementById("progressBar").style.width = percentage;
+
+  document.getElementById("waterCount").textContent = sessionStorage.getItem("waterCount") || 0;
+  document.getElementById("zeroCount").textContent = sessionStorage.getItem("zeroCount") || 0;
+  document.getElementById("powerCount").textContent = sessionStorage.getItem("powerCount") || 0;
+  document.getElementById("waterAttendees").innerHTML = sessionStorage.getItem("waterAttendees") || "";
+  document.getElementById("zeroAttendees").innerHTML = sessionStorage.getItem("zeroAttendees") || "";
+  document.getElementById("powerAttendees").innerHTML = sessionStorage.getItem("powerAttendees") || "";
+
+  if(sessionStorage.getItem("goalReached") === "true") {
+    document.getElementById("celebration").style.display = "block";
+  }
+})();
