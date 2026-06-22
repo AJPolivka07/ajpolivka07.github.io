@@ -89,9 +89,8 @@ form.addEventListener("submit", function (e) {
     document.getElementById("celebrationWinner").textContent = message;
   }
 
-  //form.reset(); //resets form fields after submission
-  //TODO undisable, currently in debug to allow spam
-
+  form.reset(); //resets form fields after submission
+  
   //saves various values to session storage
   sessionStorage.setItem("count", count);
   sessionStorage.setItem("percentage", percentage);
