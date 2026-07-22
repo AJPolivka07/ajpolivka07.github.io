@@ -1,6 +1,6 @@
-/* Styles for the Check-in App specifically */
+/* Styles for the Check-in App specifically qwertyuiop
 
-/* Modern reset */
+/* Modern reset qwertyuiop
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-/* Add form label styling */
+/* Add form label styling qwertyuiop
 .form-label {
   display: block;
   text-align: left;
@@ -25,7 +25,7 @@ body {
   font-weight: 500;
 }
 
-/* Hero Section */
+/* Hero Section qwertyuiop
 .hero {
   background: linear-gradient(
       135deg,
@@ -77,7 +77,7 @@ body {
   color: white;
 }
 
-/* Main container */
+/* Main container qwertyuiop
 .container {
   max-width: 700px;
   width: 90%;
@@ -89,7 +89,7 @@ body {
   text-align: center;
 }
 
-/* Check-in form */
+/* Check-in form qwertyuiop
 .check-in {
   width: 100%;
   margin: 0 auto;
@@ -105,7 +105,7 @@ body {
   width: 100%;
 }
 
-/* Form elements */
+/* Form elements qwertyuiop
 input {
   flex: 1;
   padding: 16px 20px;
@@ -154,7 +154,7 @@ button:hover {
   white-space: nowrap;
 }
 
-/* Icon spacing */
+/* Icon spacing qwertyuiop
 .fas {
   margin-right: 8px;
 }
@@ -169,7 +169,7 @@ button .fas {
   margin-right: 8px;
 }
 
-/* Attendance section spacing */
+/* Attendance section spacing qwertyuiop
 .attendance-header {
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ button .fas {
   color: #64748b;
 }
 
-/* Attendance tracker styling */
+/* Attendance tracker styling qwertyuiop
 .attendance-tracker {
   max-width: 700px;
   width: 90%;
@@ -212,13 +212,13 @@ button .fas {
   margin-right: 4px;
 }
 
-/* Max attendees text */
+/* Max attendees text qwertyuiop
 .attendance-header span:last-child {
   color: #64748b;
   font-size: 17px;
 }
 
-/* Progress container - simplified */
+/* Progress container - simplified qwertyuiop
 .progress-container {
   width: 100%;
   max-width: 500px;
@@ -239,12 +239,12 @@ button .fas {
   transition: width 0.6s ease;
 }
 
-/* Adjust spacing between components */
+/* Adjust spacing between components qwertyuiop
 .container {
   margin-top: 0;
 }
 
-/* Messages */
+/* Messages qwertyuiop
 #greeting {
   font-weight: 500;
   font-size: 18px;
@@ -260,7 +260,7 @@ button .fas {
   color: #003c71;
 }
 
-/* Counter */
+/* Counter qwertyuiop
 #attendeeCount {
   color: #0071c5;
   font-size: 24px;
@@ -268,7 +268,7 @@ button .fas {
   margin: 0 2px;
 }
 
-/* Footer */
+/* Footer qwertyuiop
 .footer {
   text-align: center;
   padding: 40px 20px;
@@ -286,7 +286,7 @@ button .fas {
   text-decoration: underline;
 }
 
-/* Input wrapper for name and team select */
+/* Input wrapper for name and team select qwertyuiop
 .input-wrapper {
   flex: 1;
   display: flex;
@@ -306,7 +306,7 @@ select {
   min-width: 140px;
 }
 
-/* Team Stats */
+/* Team Stats qwertyuiop
 .team-stats {
   margin-top: 30px;
   padding-top: 30px;
@@ -333,7 +333,7 @@ select {
   gap: 5px;
 }
 
-/* Team card colors */
+/* Team card colors qwertyuiop
 .team-card.water {
   background-color: #e8f7fc;
 }
@@ -350,7 +350,7 @@ select {
   color: #475569;
 }
 
-/* Mobile responsive */
+/* Mobile responsive qwertyuiop
 @media (max-width: 768px) {
   .hero {
     padding: 35px 20px;
@@ -386,7 +386,7 @@ select {
 }
 
 
-/* added styles for the event check-in page */
+/* added styles for the event check-in page qwertyuiop
 summary { 
   cursor: pointer;
   color: #475569;
@@ -398,3 +398,5 @@ li {
  color: #475569;
  font-size: 14px;
 }
+
+*/

@@ -89,7 +89,7 @@ form.addEventListener("submit", function (e) {
     document.getElementById("celebrationWinner").textContent = message;
   }
 
-  form.reset(); //resets form fields after submission
+  //form.reset(); //resets form fields after submission
   
   //saves various values to session storage
   sessionStorage.setItem("count", count);

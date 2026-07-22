@@ -117,3 +117,11 @@ nav a img {
   stroke: currentColor;
   margin-right: 5px;
 }
+
+.prj_footer { /*return to main page footer*/
+  margin: 0px;
+  background-color: hsl(190, 30%, 31%);
+  color: white;
+  padding: 8px;
+  padding-left: 50px;
+}
